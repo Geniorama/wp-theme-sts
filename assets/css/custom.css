@@ -102,6 +102,7 @@ html{
     margin: 30px 0;
     font-weight: bold;
   }
+
   .sts-slick-home__cap__title span {
     display: block;
   }
@@ -125,6 +126,16 @@ html{
     font-family: "Avenir Next LT Pro", sans-serif;
     color: white;
     font-size: 30px;
+  }
+
+  @media (max-width: 1290px){
+    .sts-slick-home__cap__title{
+      font-size: 60px;
+    }
+
+    .sts-slick-home__cap__desc {
+      font-size: 25px;
+    }
   }
   .sts-slick-home__cap__off {
     background-color: #86DE0B;
@@ -236,11 +247,12 @@ html{
   
   @media (max-width: 575.98px) {
     .sts-slick-home__cap {
-      padding: 2em;
+      padding: 2em !important;
     }
     .sts-slick-home__cap__title {
       font-size: 40px;
       margin: 10px 0;
+      margin-top: 70px;
     }
     .sts-slick-home__cap__desc {
       font-size: 20px;
@@ -694,6 +706,10 @@ html{
 /* CUSTOM ELEMENTOR */
 .sts-title-with-arrow .elementor-widget-container{
   text-align: center;
+}
+
+.sts-title-with-arrow.left .elementor-widget-container{
+  text-align: left;
 }
 
 .sts-title-with-arrow .elementor-widget-container .elementor-icon-box-wrapper{

@@ -5,12 +5,14 @@ AOS.init();
 // Inicializando Parallax
 const scenes = document.querySelectorAll('.sts-parallax');
 
-scenes.forEach(scene => {
-    const parallaxInstance = new Parallax(scene, {
-        relativeInput: true,
-        pointerEvents: true
-    })
-});
+if(screen.width > 900){
+    scenes.forEach(scene => {
+        const parallaxInstance = new Parallax(scene, {
+            relativeInput: true,
+            pointerEvents: true
+        })
+    });
+}
 
 
 
@@ -38,6 +40,7 @@ jQuery(function ($) {
         autoplay: true,
         arrows: false,
         dots: true,
+        autoplaySpeed: 10000,
         responsive: [
             {
                 breakpoint: 1024,
