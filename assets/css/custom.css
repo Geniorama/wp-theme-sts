@@ -228,6 +228,7 @@ html{
   .sts-slick-home__fig.content-left .sts-slick-home__cap {
     align-items: flex-start;
     padding: 3em;
+    width: 70%;
   }
   .sts-slick-home__fig.content-left .sts-slick-home__cap__title {
     text-align: left;
@@ -237,6 +238,17 @@ html{
   }
   .sts-slick-home__fig.content-left .sts-slick-home__cap__desc {
     text-align: left;
+  }
+
+  @media (min-width: 900px){
+    .sts-slick-home__fig.content-left .sts-slick-home__cap, .sts-slick-home__fig.content-right .sts-slick-home__cap {
+      width: 70%;
+    }
+
+    .sts-slick-home__fig.content-right .sts-slick-home__cap{
+      left: unset !important;
+      right: 0;
+    }
   }
 
   @keyframes animateZoom {
