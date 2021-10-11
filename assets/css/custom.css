@@ -1,7 +1,14 @@
 @font-face {
     font-family: "Avenir Next LT Pro";
-    src: url("https://geniorama.site/demo/sts-corporativo/wp-content/themes/generatepress_child/assets/fonts/AvenirNextLTPro-Regular.eot");
+    src: url("../fonts/AvenirNextLTPro-Regular.eot") format('embedded-opentype'),
+         url("../fonts/AvenirNextLTPro-Regular.woff") format('woff');
     font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro Bold";
+  src: url("../fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: normal;
 }
 
 body{
@@ -228,7 +235,6 @@ html{
   .sts-slick-home__fig.content-left .sts-slick-home__cap {
     align-items: flex-start;
     padding: 3em;
-    width: 70%;
   }
   .sts-slick-home__fig.content-left .sts-slick-home__cap__title {
     text-align: left;
