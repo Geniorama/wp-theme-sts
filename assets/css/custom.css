@@ -255,40 +255,6 @@ html{
       50%{transform: scale(1.5) rotate(-10deg);}
       100%{ transform: scale(1) rotate(0deg); }
   }
-  
-  @media (max-width: 575.98px) {
-    .sts-slick-home__cap {
-      padding: 2em !important;
-    }
-    .sts-slick-home__cap__title {
-      font-size: 40px;
-      margin: 10px 0;
-      margin-top: 70px;
-    }
-    .sts-slick-home__cap__desc {
-      font-size: 20px;
-    }
-    .sts-slick-home__cap__off {
-      font-size: 20px;
-    }
-    .sts-slick-home__cta {
-      display: block;
-      margin-bottom: 10px;
-    }
-    .sts-slick-home__buttons {
-      width: 100%;
-    }
-    .sts-slick-home .slick-dots {
-      bottom: 20px;
-      top: unset;
-      height: auto;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      left: 0;
-    }
-  }
 
 /* CARD SERVICES */
 
@@ -534,22 +500,6 @@ html{
   margin: 0;
 }
 
-
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .sts-row-services .sts-col-services {
-    width: 50%;
-  }
-}
-@media (max-width: 575.98px) {
-  .sts-row-services {
-    flex-direction: column;
-  }
-  .sts-row-services .sts-col-services {
-    width: 100%;
-  }
-}
-
 /* SLICK ABOUT COACH */
 .sts-slider-about {
   position: relative;
@@ -756,9 +706,104 @@ html{
   color: #E3F401;
 }
 
+.sts-blog-categories .sts-blog-categories__list .sts-blog-categories__link.active:hover{
+  color: black;
+}
+
+/* Grid Blog */
+.sts-blog-section{
+  margin: 4em 0;
+}
+.sts-blog-section .sts-blog-section__row{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.sts-blog-section .sts-blog-section__col{
+  width: calc(100% / 3);
+  box-sizing: border-box;
+  padding: 10px 20px;
+  display: none;
+}
+
+.sts-blog-section .sts-blog-section__item{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sts-blog-section .sts-blog-section__item__img{
+  height: 202px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.sts-blog-section .sts-blog-section__item__cap{
+  padding: 2em;
+}
+
+.sts-blog-section .sts-blog-section__item .sts-blog-section__item__date{
+  font-size: 15px;
+}
+
+.sts-blog-section .sts-blog-section__item .sts-blog-section__item__title{
+  font-size: 25px;
+  font-weight: bold;
+  transition: all .3s;
+}
+
+.sts-blog-section .sts-blog-section__item .sts-blog-section__item__title__link:hover .sts-blog-section__item__title{
+  color: black;
+  opacity: .6;
+}
+
+.sts-blog-section .sts-blog-section__item .sts-blog-section__item__desc{
+  font-size: 18px;
+}
+
+.sts-blog-section .sts-blog-section__item .sts-blog-section__item__more{
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-align: center;
+  display: block;
+  background-color: #E3F401;
+  padding: 1.5em;
+}
+
+.sts-blog-section .sts-blog-section__item .sts-blog-section__item__more:hover{
+  color: #E3F401;
+  background-color: black;
+}
+
+.sts-blog-load-more{
+  background-color: black;
+  border-radius: 0px;
+  margin: 2em 0;
+  font-family: "Avenir Next LT Pro" !important;
+  letter-spacing: 0.1em;
+}
+
+.sts-text-center{
+  text-align: center;
+}
+
 /* Mobile select */
 .sts-blog-categories .sts-blog-categories__form{
   display: none;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sts-row-services .sts-col-services {
+    width: 50%;
+  }
+}
+
+@media (max-width: 991.98px){
+  .sts-blog-section .sts-blog-section__col{
+    width: 50%;
+  }
 }
 
 @media (max-width: 575.98px){
@@ -768,5 +813,48 @@ html{
 
   .sts-blog-categories .sts-blog-categories__form{
     display: block;
+  }
+
+  .sts-row-services {
+    flex-direction: column;
+  }
+  .sts-row-services .sts-col-services {
+    width: 100%;
+  }
+
+  .sts-slick-home__cap {
+    padding: 2em !important;
+  }
+  .sts-slick-home__cap__title {
+    font-size: 40px;
+    margin: 10px 0;
+    margin-top: 70px;
+  }
+  .sts-slick-home__cap__desc {
+    font-size: 20px;
+  }
+  .sts-slick-home__cap__off {
+    font-size: 20px;
+  }
+  .sts-slick-home__cta {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .sts-slick-home__buttons {
+    width: 100%;
+  }
+  .sts-slick-home .slick-dots {
+    bottom: 20px;
+    top: unset;
+    height: auto;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 0;
+  }
+
+  .sts-blog-section .sts-blog-section__col{
+    width: 100%;
   }
 }
