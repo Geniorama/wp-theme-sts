@@ -726,3 +726,47 @@ html{
 .sts-title-with-arrow .elementor-widget-container .elementor-icon-box-wrapper{
   display: inline-flex !important;
 }
+
+
+/* STS BLOG */
+.sts-blog-categories .sts-blog-categories__list{
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.sts-blog-categories .sts-blog-categories__list .sts-blog-categories__link{
+  padding: .8em 2em;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  display: block;
+}
+
+.sts-blog-categories .sts-blog-categories__list .sts-blog-categories__link.active{
+  background-color: #E3F401;
+  color: black;
+}
+
+.sts-blog-categories .sts-blog-categories__list .sts-blog-categories__link:hover{
+  color: #E3F401;
+}
+
+/* Mobile select */
+.sts-blog-categories .sts-blog-categories__form{
+  display: none;
+}
+
+@media (max-width: 575.98px){
+  .sts-blog-categories .sts-blog-categories__list{
+    display: none;
+  }
+
+  .sts-blog-categories .sts-blog-categories__form{
+    display: block;
+  }
+}

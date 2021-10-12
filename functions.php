@@ -32,5 +32,6 @@ require('inc/cpt-sts-sliders.php');
 
 // SHORTCODES
 require('inc/sc-sts-flipcards.php');
+require('inc/sc-sts-blog.php');
 
 // Hola mundo
