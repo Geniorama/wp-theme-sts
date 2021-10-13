@@ -1,5 +1,7 @@
 <?php
 
+require_once('helpers.php');
+
 if(!function_exists('sts_blog_func')){
     add_shortcode( 'sts_blog', 'sts_blog_func' );
 
@@ -45,9 +47,7 @@ if(!function_exists('sts_blog_func')){
             <section class="sts-blog-section">
                 <div class="sts-blog-section__row">
                     <?php while($query->have_posts()): $query->the_post(); 
-
                         $cats_post = get_the_category();
-                        
                         
                         ?>
                         
@@ -64,7 +64,7 @@ if(!function_exists('sts_blog_func')){
                                         <span class="sts-blog-section__item__date"><?php echo get_the_date(); ?></span>
                                         <a href="<?php the_permalink(); ?>" class="sts-blog-section__item__title__link"><h2 class="sts-blog-section__item__title"><?php the_title(); ?></h2></a>
                                         <p class="sts-blog-section__item__desc">
-                                            <?php the_excerpt(); ?>
+                                            <?php echo get_excerpt(70) ?>
                                         </p>
                                         <a href="<?php the_permalink(); ?>" class="sts-blog-section__item__more">
                                             LEER MÁS
