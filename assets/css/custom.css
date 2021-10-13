@@ -1,8 +1,8 @@
-@font-face {
+/* @font-face {
   font-family: "Avenir Next LT Pro";
   src: url("https://geniorama.site/demo/sts-corporativo/wp-content/themes/generatepress_child/assets/fonts/AvenirNextLTPro-Regular.eot") format('embedded-opentype');
   font-weight: normal;
-}
+} */
 
 body{
     font-family: "Avenir Next LT Pro" !important;
