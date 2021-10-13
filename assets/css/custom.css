@@ -804,7 +804,35 @@ html{
   font-size: 20px;
 }
 
-/* SEARCH BLOG */
+/* Single Blog */
+.single-post .header-elements{
+  position: relative !important;
+}
+
+.sidebar .widget h2{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.sidebar .widget .wp-block-latest-posts__list li{
+  border-bottom: 1px solid rgb(218, 218, 218);
+  padding-bottom: 1em;
+}
+
+.sidebar .widget_search{
+  padding-bottom: 0px !important;
+}
+
+.sidebar .widget_search .wp-block-search__button, .sidebar .widget_search .wp-block-search__label{
+  font-family: "Avenir Next LT Pro" !important;
+}
+
+.sidebar .widget_search .wp-block-search__button{
+  background-color: black;
+  color: white;
+  border: none
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
   .sts-row-services .sts-col-services {
     width: 50%;
