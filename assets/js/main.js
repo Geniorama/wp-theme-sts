@@ -144,6 +144,7 @@ jQuery(function ($) {
         }
     }
 
+    // Categories Blog Desktop
     $('.sts-blog-categories__link').on('click', function(e){
         e.preventDefault()
         var dataCat = $(this).attr('data-cat')
@@ -157,5 +158,19 @@ jQuery(function ($) {
             const loaditems = "." + dataCat
             loadCat(loaditems)
         }       
+    })
+
+
+    $('.sts-blog-categories__form').on('change', function(e) {
+        var dataCat = $('#sts-blog-cat-mobile').val()
+
+        $("#sts-blog-load-more").attr('data-load', dataCat)
+
+        if(dataCat == "todo"){
+            loadCat('.sts-blog-section__col')
+        } else {
+            const loaditems = "." + dataCat
+            loadCat(loaditems)
+        }
     })
 });

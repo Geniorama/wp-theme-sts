@@ -33,7 +33,7 @@ if(!function_exists('sts_blog_func')){
                 </ul>
 
                 <form class="sts-blog-categories__form">
-                    <select name="" id="" class="sts-blog-categories__select">
+                    <select name="" id="sts-blog-cat-mobile" class="sts-blog-categories__select">
                         <option value="todo">Todo</option>
                         <?php foreach($categories as $cat):?>
                             <option value="cat-<?php echo $cat->slug ?>"><?php echo $cat->name ?></option>

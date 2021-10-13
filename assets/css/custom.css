@@ -745,6 +745,7 @@ html{
 
 .sts-blog-section .sts-blog-section__item .sts-blog-section__item__date{
   font-size: 15px;
+  text-transform: capitalize;
 }
 
 .sts-blog-section .sts-blog-section__item .sts-blog-section__item__title{
@@ -793,12 +794,17 @@ html{
 .sts-blog-categories .sts-blog-categories__form{
   display: none;
   padding: 20px;
+  overflow: hidden;
 }
 
 .sts-blog-categories .sts-blog-categories__form .sts-blog-categories__select{
   width: 100%;
+  background-color: black;
+  color: #E3F401;
+  font-size: 20px;
 }
 
+/* SEARCH BLOG */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .sts-row-services .sts-col-services {
     width: 50%;
