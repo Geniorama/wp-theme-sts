@@ -32,15 +32,14 @@ if(!function_exists('sts_blog_func')){
                     <?php endforeach; ?>
                 </ul>
 
-                <div class="sts-blog-categories__form">
-                    <form action="">
-                        <select name="" id="">
-                            <option value="todo">Todo</option>
-                            <option value="todo">Category 1</option>
-                            <option value="todo">Category 2</option>
-                        </select>
-                    </form>
-                </div>
+                <form class="sts-blog-categories__form">
+                    <select name="" id="sts-blog-cat-mobile" class="sts-blog-categories__select">
+                        <option value="todo">Todo</option>
+                        <?php foreach($categories as $cat):?>
+                            <option value="cat-<?php echo $cat->slug ?>"><?php echo $cat->name ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </form>
             </div>
 
             <section class="sts-blog-section">
@@ -65,7 +64,7 @@ if(!function_exists('sts_blog_func')){
                                         <span class="sts-blog-section__item__date"><?php echo get_the_date(); ?></span>
                                         <a href="<?php the_permalink(); ?>" class="sts-blog-section__item__title__link"><h2 class="sts-blog-section__item__title"><?php the_title(); ?></h2></a>
                                         <p class="sts-blog-section__item__desc">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue gravida nec massa...
+                                            <?php the_excerpt(); ?>
                                         </p>
                                         <a href="<?php the_permalink(); ?>" class="sts-blog-section__item__more">
                                             LEER MÁS
