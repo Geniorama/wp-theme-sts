@@ -77,66 +77,85 @@ jQuery(function ($) {
         autoplay: true
     });
 
-    $('.sts-blog-section__col').slice(0, 9).show();
-    
-    $("#sts-blog-load-more").on("click", function(e){
-    e.preventDefault();
-
-    var dataLoad = $(this).attr('data-load')
-
-    if(dataLoad != 'todo'){
-        $("."+dataLoad+":hidden").slice(0, 3).slideDown();
-        if($(("."+dataLoad+":hidden").length == 0)) {
-            $(this).text("No hay más contenido").addClass("noContent");
+    // Init items blog
+    if(screen.width > 992){
+        $('.sts-blog-section__col').slice(0, 9).show();
+        if($(".sts-blog-section__col:visible").length < 9){
+            $('#sts-blog-load-more').hide()
+        } else {
+            $('#sts-blog-load-more').show()
         }
     } else {
-        $(".sts-blog-section__col:hidden").slice(0, 3).slideDown();
-        if($(".sts-blog-section__col:hidden").length == 0) {
-            $(this).text("No hay más contenido").addClass("noContent");
+        $('.sts-blog-section__col').slice(0, 6).show();
+
+        if($(".sts-blog-section__col:visible").length < 6){
+            $('#sts-blog-load-more').hide()
+        } else {
+            $('#sts-blog-load-more').show()
+        }
+    }
+
+
+    // Load more items
+    function loadMore(items) {
+        if(screen.width > 992){
+            $(`${items}:hidden`).slice(0, 3).slideDown();
+        } else {
+            $(`${items}:hidden`).slice(0, 2).slideDown();
+        }
+        
+        if($(`${items}:hidden`).length == 0) {
+            $('#sts-blog-load-more').hide()
         }
     }
     
-    
+    $("#sts-blog-load-more").on("click", function(e){
+        e.preventDefault();
+
+        var dataLoad = $(this).attr('data-load')
+
+        if(dataLoad != 'todo'){
+            const loaditems = "." + dataLoad
+            loadMore(loaditems)
+        } else {
+            loadMore('.sts-blog-section__col')
+        }
     });
 
-    $('.sts-blog-categories__link').on('click', function(e){
-        var dataCat = $(this).attr('data-cat')
-        $('.sts-blog-categories__link').removeClass('active')
-        $(this).addClass('active')
 
-        if(dataCat == "todo"){
-            $(".sts-blog-section__col").hide();
-            $(".sts-blog-section__col").slice(0, 9).fadeIn();
-
-            if($(".sts-blog-section__col:hidden").length == 0) {
-                $('#sts-blog-load-more').text("No hay más contenido").addClass("noContent");
-            } else {
-                $('#sts-blog-load-more').text("CARGAR MÁS").removeClass("noContent");
-            }
-
-            if($(".sts-blog-section__col:visible").length < 9){
+    // Load categories items
+    function loadCat(items){
+        $(".sts-blog-section__col").hide();
+        
+        if(screen.width > 992){
+            $(items).slice(0, 9).fadeIn();
+            if($(`${items}:visible`).length < 9 || $(`${items}:hidden`).length == 0){
                 $('#sts-blog-load-more').hide()
             } else {
                 $('#sts-blog-load-more').show()
             }
         } else {
-            $("#sts-blog-load-more").attr('data-load', dataCat)
-            $(".sts-blog-section__col").hide();
-            $("." + dataCat).slice(0, 9).fadeIn();
-
-            if($("."+dataCat+":visible").length < 9){
+            $(items).slice(0, 6).fadeIn();
+            if($(`${items}:visible`).length < 6 || $(`${items}:hidden`).length == 0){
                 $('#sts-blog-load-more').hide()
             } else {
                 $('#sts-blog-load-more').show()
             }
-    
-            if($("."+dataCat+":hidden").length == 0) {
-                $('#sts-blog-load-more').text("No hay más contenido").addClass("noContent");
-            } else {
-                $('#sts-blog-load-more').text("CARGAR MÁS").removeClass("noContent");
-            }
         }
+    }
 
-       
+    $('.sts-blog-categories__link').on('click', function(e){
+        e.preventDefault()
+        var dataCat = $(this).attr('data-cat')
+        $('.sts-blog-categories__link').removeClass('active')
+        $(this).addClass('active')
+        $("#sts-blog-load-more").attr('data-load', dataCat)
+
+        if(dataCat == "todo"){
+            loadCat('.sts-blog-section__col')
+        } else {
+            const loaditems = "." + dataCat
+            loadCat(loaditems)
+        }       
     })
 });
