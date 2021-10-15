@@ -18,9 +18,18 @@ if(!function_exists('add_custom_scripts')){
         wp_enqueue_script( 'parallax-js', 'https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js', array(), '3.1.0', true );
         wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '2.3.1', true );
         wp_enqueue_script( 'slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), '3.1.0', true );
-        wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), '3.1.0', true );
+
+        wp_register_script( 'main-js', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), '3.1.0', true );
+        wp_enqueue_script( 'main-js');
+        $passedValues = array( 'home_url' => get_home_url(), 'child_theme_url' => get_stylesheet_directory_uri() );
+
+        wp_localize_script( 'main-js', 'passed_object', $passedValues );
     }
+
+   
 }
+
+
 
 // Disable Gutenberg
 add_filter('use_block_editor_for_post', '__return_false', 10);
@@ -29,9 +38,11 @@ add_filter('use_block_editor_for_post', '__return_false', 10);
 // CUSTOM POST TYPES
 require('inc/cpt-sts-services.php');
 require('inc/cpt-sts-sliders.php');
+require('inc/cpt-sts-coach.php');
 
 // SHORTCODES
 require('inc/sc-sts-flipcards.php');
 require('inc/sc-sts-blog.php');
+require('inc/sc-sts-slider-coach.php');
 
 // Hola mundo

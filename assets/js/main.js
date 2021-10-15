@@ -2,6 +2,16 @@
 // Inicializando AOS
 AOS.init();
 
+/**
+ * passed_object from functions php
+ */
+
+const homeUrl = passed_object.home_url
+const childThemeUrl = passed_object.child_theme_url
+const childThemeImg = childThemeUrl + "/assets/img"
+
+console.log(childThemeUrl)
+
 // Inicializando Parallax
 const scenes = document.querySelectorAll('.sts-parallax');
 
@@ -173,4 +183,16 @@ jQuery(function ($) {
             loadCat(loaditems)
         }
     })
+
+    $('.sts-slick-about__item__cont__col ul').addClass('sts-slick-about__item__cont__list')
+    $('.sts-slick-about__item__cont__col ul li').each(function() {
+        $(this).addClass('.sts-slick-about__item__cont__list__item')
+        const textItem = $(this).text()
+        $(this).html(`
+            <img src="${childThemeImg}/akar-icons_circle-check.svg" class="sts-slick-about__item__cont__list__icon">
+            <span class="sts-slick-about__item__cont__list__text">${textItem}</span>
+        `)
+    })
+
+    
 });
