@@ -186,7 +186,7 @@ jQuery(function ($) {
 
     $('.sts-slick-about__item__cont__col ul').addClass('sts-slick-about__item__cont__list')
     $('.sts-slick-about__item__cont__col ul li').each(function() {
-        $(this).addClass('.sts-slick-about__item__cont__list__item')
+        $(this).addClass('sts-slick-about__item__cont__list__item')
         const textItem = $(this).text()
         $(this).html(`
             <img src="${childThemeImg}/akar-icons_circle-check.svg" class="sts-slick-about__item__cont__list__icon">
