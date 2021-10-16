@@ -44,5 +44,6 @@ require('inc/cpt-sts-coach.php');
 require('inc/sc-sts-flipcards.php');
 require('inc/sc-sts-blog.php');
 require('inc/sc-sts-slider-coach.php');
+require('inc/sc-sts-slider-home.php');
 
 // Hola mundo

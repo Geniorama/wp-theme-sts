@@ -55,7 +55,7 @@ html{
 
 /* SLICK HOME PRINCIPAL */
 .sts-slick-home{
-  display: none;
+  /* display: none; */
 }
 .sts-slick-home__fig {
     margin: 0;
