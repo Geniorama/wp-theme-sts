@@ -14,7 +14,7 @@ if(!function_exists('sts_slider_coach_func')){
         if($query->have_posts()){
             ob_start();
             ?>
-            <section class="sts-slider-about" id="sts-slider-about">
+            <section class="sts-slider-about" id="sts-slider-about" style="background-image: url('<?php get_stylesheet_directory_uri() ?>/img/sts-trama.svg')">
                 <div class="sts-slick-about slick-theme">
                     <?php while($query->have_posts()): $query->the_post()?>
                     <div class="sts-slick-about__item">
