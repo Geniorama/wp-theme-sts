@@ -5,7 +5,8 @@ if(!function_exists('sts_slider_home_func')){
     function sts_slider_home_func(){
         $args = array(
             'post_type' => 'sts_slider',
-            'posts_per_page' => -1
+            'posts_per_page' => -1,
+            'order' => 'ASC'
         );
 
         $query = new WP_Query($args);

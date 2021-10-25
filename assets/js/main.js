@@ -42,7 +42,7 @@ jQuery(function ($) {
     stickyHeader('.header-elements__bottom', 'sts-header-sticky', 600)
 
     // Disable link card services
-    $('.sts-card-service').on('click', (e)=>(e.preventDefault()));
+    // $('.sts-card-service').on('click', (e)=>(e.preventDefault()));
     
     // Slick home principal
 	$('.sts-slick-home').slick({
