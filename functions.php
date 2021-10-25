@@ -48,4 +48,24 @@ require('inc/sc-sts-blog.php');
 require('inc/sc-sts-slider-coach.php');
 require('inc/sc-sts-slider-home.php');
 
-// Hola mundo
+// BACK TO TOP
+if(!function_exists('sts_back_to_top')){
+
+    function sts_home_ancle(){
+        echo "<div id='sts-top-ancle'></div>";
+    }
+
+    add_action( 'wp_body_open','sts_home_ancle' );
+    
+    function sts_back_to_top(){
+        ?>
+        <div class="sts-back-to-top" id="sts-back-to-top">
+            <a href="#sts-top-ancle" class="sts-back-to-top__link">
+                <i class="fas fa-angle-up"></i>
+            </a>
+        </div>
+        <?php
+    }
+
+    add_action( 'wp_footer', 'sts_back_to_top');
+}
