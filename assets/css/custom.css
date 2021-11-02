@@ -11,7 +11,6 @@ body{
 
 html{
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -840,30 +839,6 @@ html{
   background-color: black;
   color: white;
   border: none
-}
-
-/* BACK TO TOP */
-.sts-back-to-top{
-  position: fixed;
-  bottom: 0;
-  right: 2em;
-}
-.sts-back-to-top .sts-back-to-top__link{
-  background-color: #E3F401;
-  display: block;
-  padding: .5em 1em;
-  z-index: 999;
-  color: black;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-}
-
-.sts-back-to-top .sts-back-to-top__link:hover{
-  color: black;
-}
-
-.sts-back-to-top .sts-back-to-top__link:active{
-  color: black;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
