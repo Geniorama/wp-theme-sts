@@ -625,6 +625,37 @@ html{
   object-fit: cover;
 }
 
+
+/* FORM LOGIN */
+.woocommerce-form-login .input-text{
+  width: 100%;
+  font-family: "Avenir Next LT Pro" !important;
+  border: 1px solid #EAEAEA;
+  background-color: transparent;
+}
+
+.woocommerce-form-login .form-row label{
+  display: none;
+}
+
+.woocommerce-form-login .woocommerce-form-login__submit{
+  width: 100%;
+  background-color: #E3F401;
+  color: black;
+  font-family: "Avenir Next LT Pro" !important;
+}
+
+.woocommerce-form-login .lost_password{
+  text-align: center;
+  color: #EAEAEA;
+  margin-bottom: 0px;
+  line-height: 1em;
+}
+
+.woocommerce-form-login .lost_password a{
+  color: #EAEAEA;
+}
+
 @media (max-width: 579px) {
   .sts-slider-about {
     height: auto;

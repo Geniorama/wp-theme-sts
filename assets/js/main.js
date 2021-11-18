@@ -194,5 +194,9 @@ jQuery(function ($) {
         `)
     })
 
+    // Form login
+    $('.woocommerce-form-login #username').attr('placeholder', 'Nombre usuario o correo electrónico');
+    $('.woocommerce-form-login #password').attr('placeholder', 'Contraseña');
+
     
 });
