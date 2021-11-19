@@ -627,7 +627,7 @@ html{
 
 
 /* FORM LOGIN */
-.woocommerce-form-login .input-text{
+.woocommerce-form-login .input-text, .woocommerce-ResetPassword .input-text{
   width: 100%;
   font-family: "Avenir Next LT Pro" !important;
   border: 1px solid #EAEAEA;
@@ -636,11 +636,16 @@ html{
   color: white;
 }
 
-.woocommerce-form-login .form-row label{
+.woocommerce-ResetPassword .input-text{
+  border-color: #C4C4C4;
+  color: black;
+}
+
+.woocommerce-form-login .form-row label, .woocommerce-ResetPassword .form-row label{
   display: none;
 }
 
-.woocommerce-form-login .woocommerce-form-login__submit{
+.woocommerce-form-login .woocommerce-form-login__submit, .woocommerce-ResetPassword .woocommerce-Button{
   width: 100%;
   background-color: #E3F401;
   color: black;

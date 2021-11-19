@@ -198,5 +198,8 @@ jQuery(function ($) {
     $('.woocommerce-form-login #username').attr('placeholder', 'Nombre usuario o correo electrónico');
     $('.woocommerce-form-login #password').attr('placeholder', 'Contraseña');
 
+    // Form lost password
+    $('.woocommerce-ResetPassword #user_login').attr('placeholder', 'Nombre usuario o correo electrónico');
+
     
 });
