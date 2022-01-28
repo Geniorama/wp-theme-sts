@@ -236,3 +236,27 @@
     text-align: center;
     max-width: 900px;
 }
+
+
+/* Dashboard tabs */
+.sts-dashboard-tab{
+    display: none;
+}
+
+.sts-dashboard-tab#tab-profile{
+    display: block;
+}
+
+
+/* Sidebar submennu */
+.sts-submenu-dashboard{
+    list-style: none;
+    text-align: center;
+    display: none;
+}
+
+
+.sts-submenu-dashboard a{
+    border: 1px solid var(--p-color);
+    border-radius: 5px;
+}

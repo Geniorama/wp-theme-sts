@@ -1,8 +1,12 @@
 <?php 
 
 /* Template Name: Dashboard Page */ 
+if ( !is_user_logged_in() ) {
+    wp_redirect( site_url());
+}
 
 get_header();
+
 ?>
 <main class="sts-main-dashboard">
     <aside class="sts-sidebar-dashboard">

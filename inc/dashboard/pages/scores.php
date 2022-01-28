@@ -4,6 +4,11 @@ $curr_user = wp_get_current_user();
 $curr_user_data = $curr_user->data;
 ?>
 
+<ul class="sts-breadcrums-dashboard">
+    <li class="sts-breadcrums-dashboard__item"><a href="#" class="sts-breadcrums-dashboard__link">Personal records</a></li>
+    <!-- <li class="sts-breadcrums-dashboard__separator">|</li> -->
+</ul>
+
 <div class="sts-content-dashboard__scores">
     <h2 class="sts-scores-title">Natación</h2>
     <?php

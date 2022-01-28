@@ -1,6 +1,10 @@
-<ul class="sts-breadcrums-dashboard">
-    <li class="sts-breadcrums-dashboard__item"><a href="#" class="sts-breadcrums-dashboard__link">MI PERFIL</a></li>
-    <!-- <li class="sts-breadcrums-dashboard__separator">|</li> -->
-</ul>
 
-<?php require("pages/plan-progress.php"); ?>
+<div class="sts-dashboard-tab" id="tab-profile">
+    <?php require("pages/profile.php"); ?>
+</div>
+<div class="sts-dashboard-tab" id="tab-scores">
+    <?php require("pages/scores.php"); ?>
+</div>
+<div class="sts-dashboard-tab" id="tab-plan-progress">
+    <?php require("pages/plan-progress.php"); ?>
+</div>

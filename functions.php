@@ -25,6 +25,7 @@ if(!function_exists('add_custom_scripts')){
 
         wp_register_script( 'main-js', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), '3.1.0', true );
         wp_enqueue_script( 'main-js');
+        wp_enqueue_script( 'dashboard-sts', get_stylesheet_directory_uri() . '/assets/js/dashboard-sts.js', array('jquery'), '1.0');
         $passedValues = array( 'home_url' => get_home_url(), 'child_theme_url' => get_stylesheet_directory_uri() );
 
         wp_localize_script( 'main-js', 'passed_object', $passedValues );
@@ -43,12 +44,16 @@ add_filter('use_block_editor_for_post', '__return_false', 10);
 require('inc/cpt-sts-services.php');
 require('inc/cpt-sts-sliders.php');
 require('inc/cpt-sts-coach.php');
+require('inc/cpt-sts-modules.php');
 
 // SHORTCODES
 require('inc/sc-sts-flipcards.php');
 require('inc/sc-sts-blog.php');
 require('inc/sc-sts-slider-coach.php');
 require('inc/sc-sts-slider-home.php');
+
+// TAXONOMIES
+require('inc/tax-sts-cats-modules.php');
 
 // Hola mundo
 
@@ -204,13 +209,121 @@ function sts_form_reset_password_func(){
     do_action( 'woocommerce_after_reset_password_form' );
     return ob_get_clean();
 }
+function get_link_by_slug($slug, $type = 'post'){
+    $post = get_page_by_path($slug, OBJECT, $type);
+    return get_permalink($post->ID);
+}
 
-//Redirect to custom lost password on request
-// function csx_redirections() {
-//     if ( isset( $_GET[ 'reset-link-sent' ] ) || isset( $_GET[ 'show-reset-form' ] ) ||
-//         isset( $_GET[ 'key' ] ) && isset( $_GET[ 'id' ] ) ) {
-//         wp_redirect( home_url() . '/restablecer-contrasena' );
-//         exit;
-//     }
-// }
-// add_action( 'template_redirect', 'csx_redirections' );
+
+/**
+* Redirect users to custom URL based on their role after login
+*
+* @param string $redirect
+* @param object $user
+* @return string
+*/
+function wc_custom_user_redirect( $redirect, $user ) {
+    // Get the first of all the roles assigned to the user
+    $role = $user->roles[0];
+    $dashboard = admin_url();
+    $dashboard_customer = get_permalink(  get_page_by_path( 'dashboard-sts' ) );
+    $myaccount = get_permalink( wc_get_page_id( 'shop' ) );
+    if( $role == 'administrator' ) {
+      //Redirect administrators to the dashboard
+      $redirect = $dashboard;
+    } elseif ( $role == 'shop-manager' ) {
+      //Redirect shop managers to the dashboard
+      $redirect = $dashboard;
+    } elseif ( $role == 'editor' ) {
+      //Redirect editors to the dashboard
+      $redirect = $dashboard;
+    } elseif ( $role == 'author' ) {
+      //Redirect authors to the dashboard
+      $redirect = $dashboard;
+    } elseif ( $role == 'customer') {
+      //Redirect customers and subscribers to the "My Account" page
+      $redirect = $dashboard_customer;
+    } else {
+      //Redirect any other role to the previous visited page or, if not available, to the home
+      $redirect = wp_get_referer() ? wp_get_referer() : home_url();
+    }
+    return $redirect;
+  }
+  add_filter( 'woocommerce_login_redirect', 'wc_custom_user_redirect', 10, 2 ); 
+
+
+  add_shortcode( 'my_purchased_products', 'bbloomer_products_bought_by_curr_user' );
+   
+function bbloomer_products_bought_by_curr_user() {
+   
+    // GET CURR USER
+    $current_user = wp_get_current_user();
+    if ( 0 == $current_user->ID ) return;
+   
+    // GET USER ORDERS (COMPLETED + PROCESSING)
+    $customer_orders = get_posts( array(
+        'numberposts' => -1,
+        'meta_key'    => '_customer_user',
+        'meta_value'  => $current_user->ID,
+        'post_type'   => wc_get_order_types(),
+        'post_status' => array_keys( wc_get_is_paid_statuses() ),
+    ) );
+   
+    // LOOP THROUGH ORDERS AND GET PRODUCT IDS
+    if ( ! $customer_orders ) return;
+    $product_ids = array();
+    foreach ( $customer_orders as $customer_order ) {
+        $order = wc_get_order( $customer_order->ID );
+        $items = $order->get_items();
+        foreach ( $items as $item ) {
+            $product_id = $item->get_product_id();
+            $product_ids[] = $product_id;
+        }
+    }
+    $product_ids = array_unique( $product_ids );
+    $product_ids_str = implode( ",", $product_ids );
+   
+    // PASS PRODUCT IDS TO PRODUCTS SHORTCODE
+    return $product_ids_str;
+   
+}
+
+
+add_shortcode( 'sts_show_content', 'sts_show_content_func' );
+
+function sts_show_content_func($atts){
+    $atts = shortcode_atts( array(
+        'ids_tax' => []
+    ), 
+    $atts, 
+    'sts_show_content'
+    );
+
+    $ids_tax = explode(",", $atts['ids_tax']);
+
+    $args = array(
+        'post_type' => 'sts_modules',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'sts_cat_modules',
+                'field'    => 'term_id',
+                'terms'    => ['24'],
+            ),
+        ),
+    );
+
+    $query = new WP_Query($args);
+
+    if($query->have_posts()){
+        ?>
+        <?php while($query->have_posts()): $query->the_post()?>
+            <h3>Hola</h3>
+        <?php endwhile; ?>
+        <?php   
+        wp_reset_postdata();
+    } else{
+        echo "No hay posts";
+    }
+
+    wp_
+}
