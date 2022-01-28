@@ -7,29 +7,56 @@
             <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/icono-atletismo.svg" alt="">
         </div>
     </div>
-    <div class="sts-progress-bar">
-        <h5 class="sts-progress-bar__title">
-            Progreso total
-        </h5>
-
-        <div class="sts-progress-bar__load">
-            <div class="sts-progress-bar__load__cont">
-                <span class="sts-progress-bar__load__back"></span>
-                <span class="sts-progress-bar__load__progress" data-progress="35"></span>
+    <div class="sts-slick-plan">
+        <div class="sts-item-slick">
+           <div>
+            <section class="sts-section-video">
+            <div class='embed-container'>
+                <iframe src='https://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
-            <span class="sts-progress-bar__load__number">35%</span>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </section>
+                <section class="sts-section-info">
+                    <h3 class="sts-section-info__title">
+                        Lección 1
+                    </h3>
+                    <p class="sts-section-info__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit commodo blandit sit aliquam vitae, pulvinar. Semper ac interdum nulla nulla. Convallis urna, at tempus amet, dignissim et arcu, dignissim. Malesuada nulla nisl, tellus quis. Volutpat, mattis molestie sem nisi.
+                    </p>
+                </section>
+           </div>
         </div>
 
-        <section class="sts-section-video">
-        <div style="padding:56.25% 0 0 0;position:relative;">
-        <iframe src="https://player.vimeo.com/video/667727469?h=e85613ece8&color=ffffff&title=0&byline=0&portrait=0&badge=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-        </section>
-
-        <section class="sts-section-info">
-            <h3 class="sts-section-info__title">
-                Lección 1
-            </h3>  
-        </section>
-        
+        <div class="sts-item-slick">
+           <div>
+            <section class="sts-section-video">
+            <div class='embed-container'>
+                <iframe src='https://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </section>
+                <section class="sts-section-info">
+                    <h3 class="sts-section-info__title">
+                        Lección 1
+                    </h3>
+                    <p class="sts-section-info__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit commodo blandit sit aliquam vitae, pulvinar. Semper ac interdum nulla nulla. Convallis urna, at tempus amet, dignissim et arcu, dignissim. Malesuada nulla nisl, tellus quis. Volutpat, mattis molestie sem nisi.
+                    </p>
+                </section>
+           </div>
+        </div>
     </div>
 </div>
+
+<!--Progress Bar
+                <h5 class="sts-progress-bar__title">
+                    Progreso total
+                </h5>
+                <div class="sts-progress-bar__load">
+                    <div class="sts-progress-bar__load__cont">
+                        <span class="sts-progress-bar__load__back"></span>
+                        <span class="sts-progress-bar__load__progress" data-progress="35"></span>
+                    </div>
+                    <span class="sts-progress-bar__load__number">35%</span>
+                </div>
+            -->

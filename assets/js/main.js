@@ -43,7 +43,25 @@ jQuery(function ($) {
 
     // Disable link card services
     // $('.sts-card-service').on('click', (e)=>(e.preventDefault()));
-    
+    //Slick Plan Progress
+    $('.sts-slick-plan').slick({
+        speed: 1500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: false,
+        prevArrow: "<button class='sts-section-info__buttons__btn custom-prev'>← Anterior</button>",
+        nextArrow: "<button class='sts-section-info__buttons__btn custom-next'>Siguiente →</button>",
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    speed: 300
+                }
+            }
+        ]
+    });
+
     // Slick home principal
 	$('.sts-slick-home').slick({
         speed: 1500,
