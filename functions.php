@@ -365,3 +365,20 @@ function sts_show_content_func($atts){
     }
 }
 
+add_shortcode( 'sts_redirect_login_user', 'sts_redirect_login_user__func' );
+
+function sts_redirect_login_user__func(){
+    if(is_user_logged_in()){
+
+        $user = wp_get_current_user(); // getting & setting the current user 
+	    $roles = ( array ) $user->roles; // obtaining the role
+        if(in_array('customer', $roles)){
+            ?>
+            <script>
+                window.location.href = "<?php echo site_url("dashboard-sts"); ?>";
+            </script>
+            <?php
+            // wp_redirect(get_permalink( get_page_by_path( 'dashboard-sts' ) ));
+        }
+    }
+}
