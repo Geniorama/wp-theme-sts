@@ -317,13 +317,11 @@ function sts_show_content_func($atts){
     if($query->have_posts()){
         ?>
         <?php while($query->have_posts()): $query->the_post()?>
-            <h3>Hola</h3>
+            
         <?php endwhile; ?>
         <?php   
         wp_reset_postdata();
     } else{
         echo "No hay posts";
     }
-
-    wp_
 }
