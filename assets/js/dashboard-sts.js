@@ -4,8 +4,6 @@ jQuery(function ($) {
 	function showTab(tab, allTabs){
         $(allTabs).hide()
         $(tab).fadeIn()
-        
-        
     }
 
     $('.sts-tab-link').on('click', function(e){
@@ -16,6 +14,7 @@ jQuery(function ($) {
         } else {
             var dataTarget = $(this).attr('data-target')
             showTab(dataTarget, '.sts-dashboard-tab')
+            $('.sts-slick-plan').slick('refresh')
         }
        
         $('.sts-tab-link').removeClass('active')

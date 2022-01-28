@@ -299,10 +299,21 @@ function sts_show_content_func($atts){
     'sts_show_content'
     );
 
-    $ids_tax = explode(",", $atts['ids_tax']);
+    $ids_products = explode(",", $atts['ids_tax']);
+    $ids_tax = [];
+
+    if(in_array('1254', $ids_products)){
+        array_push($ids_tax, '24');
+    }
+
+    if(in_array('1255', $ids_products)){
+        array_push($ids_tax, '24');
+    }
+
 
     $args = array(
         'post_type' => 'sts_modules',
+        'order' => 'ASC',
         'tax_query' => array(
             array(
                 'taxonomy' => 'sts_cat_modules',
@@ -316,12 +327,41 @@ function sts_show_content_func($atts){
 
     if($query->have_posts()){
         ?>
+        <div class="sts-slick-plan">
         <?php while($query->have_posts()): $query->the_post()?>
-            
+        <div class="sts-item-slick">
+           <div>
+            <section class="sts-section-video">
+                <div class='embed-container'>
+                    
+                    <?php 
+                    if(get_field('tipo-video') == "Youtube"){
+                        the_field('video_youtube'); 
+                    } elseif (get_field('tipo-video') == "Vimeo") {
+                        the_field('video_vimeo'); 
+                    } else {
+                        the_field('video_importar');
+                    }
+                    ?>
+                </div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+            </section>
+            <section class="sts-section-info">
+                <h3 class="sts-section-info__title">
+                    <?php the_title(); ?>
+                </h3>
+                <div class="sts-section-info__desc">
+                    <?php the_content(); ?>
+                </div>
+            </section>
+           </div>
+        </div>
         <?php endwhile; ?>
+        </div>
         <?php   
         wp_reset_postdata();
     } else{
         echo "No hay posts";
     }
 }
+
