@@ -201,5 +201,22 @@ jQuery(function ($) {
     // Form lost password
     $('.woocommerce-ResetPassword #user_login').attr('placeholder', 'Nombre usuario o correo electrónico');
 
+
+    // Menu icons
+    $('.sts-btn-menu-shop .ekit-menu-nav-link').html(`
+        <span class="sts-menu-icon" style="margin-right: 5px;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16602 5.83334H15.6577C15.8905 5.83335 16.1208 5.88215 16.3336 5.9766C16.5465 6.07104 16.7372 6.20904 16.8934 6.38169C17.0496 6.55434 17.168 6.75781 17.2408 6.97899C17.3135 7.20017 17.3392 7.43415 17.316 7.66584L16.816 12.6658C16.7749 13.0771 16.5824 13.4584 16.276 13.7357C15.9695 14.0131 15.571 14.1667 15.1577 14.1667H7.19935C6.81391 14.1668 6.44033 14.0334 6.14222 13.7891C5.84411 13.5447 5.6399 13.2046 5.56435 12.8267L4.16602 5.83334Z" stroke="#E3F401" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M4.16602 5.83333L3.49102 3.13083C3.44587 2.95063 3.34181 2.79067 3.19536 2.67638C3.0489 2.56209 2.86846 2.5 2.68268 2.5H1.66602" stroke="#E3F401" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.66602 17.5H8.33268" stroke="#E3F401" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.332 17.5H14.9987" stroke="#E3F401" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </span>
+        Tienda
+    `)
+
+    // Open in new Tab
+    $('.sts-btn-menu-shop .ekit-menu-nav-link').attr('target', '_blank')
+
     
 });

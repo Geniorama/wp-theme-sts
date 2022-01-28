@@ -1,0 +1,238 @@
+*{
+    --p-color: #E3F401;
+}
+
+/* Reset elements */
+.page-template-sts-dashboard .header-elements{
+    position: relative !important;
+}
+
+.page-template-sts-dashboard .ekit-template-content-footer .elementor-element-07f7a6f{
+    display: none;
+}
+
+.page-template-sts-dashboard .grid-container{
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* Main styles */
+.sts-main-dashboard{
+    min-height: calc(100vh - 150px);
+    display: grid;
+    grid-template-areas: "sidebar content";
+    grid-template-columns: 300px 1fr;
+    width: 100%;
+}
+
+
+/* Sidebar styles */
+.sts-sidebar-dashboard{
+    height: 100%;
+    background-color: #1B1B1B;
+    padding: 3rem;
+    box-sizing: border-box;
+    color: white;
+    grid-area: sidebar;
+}
+
+.sts-sidebar-dashboard .sts-menu-dashboard__item__link{
+    color: white;
+    margin: 1rem 0;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+
+.sts-menu-dashboard__item__link__toggle{
+    display: inline-block;
+    margin-left: .3rem;
+}
+
+.sts-menu-dashboard__item__link__toggle svg{
+    margin-top: 10px;
+}
+
+.sts-sidebar-dashboard .sts-menu-dashboard__item__link.active{
+    color: var(--p-color);
+    font-weight: bold;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.sts-sidebar-dashboard .sts-menu-dashboard__item__link:hover{
+    color: var(--p-color);
+}
+
+.sts-sidebar-dashboard .sts-menu-dashboard{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+/* Content styles */
+.sts-content-dashboard{
+    grid-area: content;
+    padding: 5rem;
+}
+
+.sts-breadcrums-dashboard{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: .8rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.sts-breadcrums-dashboard__link{
+    margin: 0 .5rem;
+    color: #1B1B1B;
+}
+
+/* Profile styles */
+.sts-info-profile{
+    display: flex;
+    align-items: center;
+}
+
+.sts-info-profile__avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid var(--p-color);
+    margin-right: 3rem;
+}
+
+.sts-info-profile__avatar__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sts-info-profile__info__name{
+    font-weight: bold;
+}
+
+.sts-info-profile__info__desc{
+    font-size: 1.3rem;
+}
+
+.sts-info-profile__info__numbers{
+    font-size: 1.5rem;
+}
+
+.sts-info-profile__info__numbers__weight{
+    display: block;
+}
+
+.sts-scores-title{
+    font-weight: bold;
+}
+
+.sts-table-scores th{
+    background-color: black;
+    color: var(--p-color);
+    border: 1px solid #757575;
+}
+
+.sts-heading-table{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sts-heading-table{
+    color: #1B1B1B;
+}
+
+.sts-heading-table i{
+    color: black;
+}
+
+.sts-wrap-tables{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+    gap: 2rem;
+}
+
+/* Plan Progress */
+.sts-section-title__text{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.sts-section-title{
+    display: flex;
+    align-items: center;
+}
+
+.sts-section-title__text{
+    margin: 0px;
+    color: black;
+}
+
+.sts-section-title__icons{
+    margin-left: 1rem;
+}
+
+.sts-section-title__icons img{
+    margin: .5rem;
+}
+
+.sts-progress-bar__title{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.sts-progress-bar__load__cont{
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 90%;
+    height: 10px;
+   
+}
+
+.sts-progress-bar__load__back{
+    height: 10px;
+    width: 100%;
+    background-color: #1B1B1B;
+    display: block;
+}
+
+.sts-progress-bar__load__progress{
+    width: 35%;
+    height: 100%;
+    background-color: var(--p-color);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sts-progress-bar__load{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.sts-progress-bar__load__number{
+    font-style: italic;
+    margin-left: .5rem;
+    font-size: .9rem;
+    color: #747474;
+}
+
+.sts-section-video{
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 900px;
+}
