@@ -980,28 +980,28 @@ html{
 
 
 /*Estilos Carrito*/
-.page-id-962 .product-thumbnail img{
+.product-thumbnail img{
   width: 123px !important;
   height: 32px !important;
 }
-.page-id-962 .product-remove a{
+.product-remove a{
   color: #232323 !important;
 } 
-.page-id-962 .product-remove a:hover{
+.product-remove a:hover{
   background-color: #E3F401 !important;
   border-radius: 0px !important;
   color: #232323 !important;
 }
-.page-id-962 .woocommerce table.shop_table thead tr{
+.woocommerce table.shop_table thead tr{
   background-color: #F2F2F2;
 }
-.page-id-962 .woocommerce table.shop_table .product-remove,.product-thumbnail,.product-name,.product-price,.product-quantity,.product-subtotal{
+.woocommerce table.shop_table .product-remove,.product-thumbnail,.product-name,.product-price,.product-quantity,.product-subtotal{
   border: none;
 }
-.page-id-962 .woocommerce-Price-amount{
+.woocommerce-Price-amount{
   font-weight: bold !important;
 }
-.page-id-962 .coupon .button{
+.coupon .button{
   background-color: black !important;
   color: white !important;
   border-radius: 0px;
@@ -1011,37 +1011,37 @@ html{
 .woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled], .woocommerce a.button.disabled, .woocommerce a.button:disabled, .woocommerce a.button:disabled[disabled], .woocommerce button.button.disabled, .woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce input.button.disabled, .woocommerce input.button:disabled, .woocommerce input.button:disabled[disabled]{
   text-transform: uppercase !important;
 }
-.page-id-962 .coupon .button:hover{
+.coupon .button:hover{
   background-color: #E3F401 !important;
   color: black !important;
 }
-.page-id-962 .woocommerce-cart-form__cart-item .product-remove{
+.woocommerce-cart-form__cart-item .product-remove{
   padding-top: 2.5em;
   padding-bottom: 2.5em;
 }
-.page-id-962 .woocommerce #content table.cart td.actions .input-text, .woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, .woocommerce-page table.cart td.actions .input-text{
+.woocommerce #content table.cart td.actions .input-text, .woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, .woocommerce-page table.cart td.actions .input-text{
   width: 145px;
 }
-.page-id-962 .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals{
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals{
   width: 100% !important;
   margin-top: 2em;
 }
-.page-id-962 .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals h2{
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals h2{
   font-weight: bold;
 }
-.page-id-962 .cart-subtotal th{
+.cart-subtotal th{
   width: 50% !important;
 }
 .cart-collaterals .cart_totals h2{
   text-transform: uppercase;
 }
-.page-id-962 .cart-subtotal .woocommerce-Price-amount{
+.cart-subtotal .woocommerce-Price-amount{
   font-weight: 400 !important;
 }
-.page-id-962 .order-total .woocommerce-Price-amount{
+.order-total .woocommerce-Price-amount{
   font-weight: 400 !important;
 }
-.page-id-962 .wc-proceed-to-checkout .checkout-button{
+.wc-proceed-to-checkout .checkout-button{
   width: 260px !important;
   background-color: #E3F401 !important;
   color:black !important;
@@ -1049,11 +1049,11 @@ html{
   text-transform: uppercase !important;
   transition: .4s;
 }
-.page-id-962 .wc-proceed-to-checkout .checkout-button:hover{
+.wc-proceed-to-checkout .checkout-button:hover{
   background-color: black !important;
   color: white !important;
 }
-.page-id-962 .wc-proceed-to-checkout{
+.wc-proceed-to-checkout{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1065,28 +1065,28 @@ html{
   text-transform: uppercase;
 }
 /*Estilos Finalizar Compra*/
-.page-id-963 .woocommerce-billing-fields h3{
+.woocommerce-billing-fields h3{
   font-weight: bold;
 }
-.page-id-963 #order_review_heading{
+#order_review_heading{
   font-weight: bold;
   margin-top: 1.5em;
 }
-.page-id-963 .woocommerce-additional-fields h3{
+.woocommerce-additional-fields h3{
   font-weight: bold;
 }
-.page-id-963 .select2-selection{
+.select2-selection{
   height: 45px;
 }
-.page-id-963 .select2-container--default .select2-selection--single .select2-selection__rendered{
+.select2-container--default .select2-selection--single .select2-selection__rendered{
   line-height: 45px;
   background-color: #F3F3F3 !important;
 }
-.page-id-963 .select2-container--default .select2-selection--single .select2-selection__arrow{
+.select2-container--default .select2-selection--single .select2-selection__arrow{
   height: 45px !important;
   background-color: #F3F3F3 !important;
 }
-.page-id-963 .shop_table thead .product-name,.product-total{
+.shop_table thead .product-name,.product-total{
   background-color: #F3F3F3 !important;
 }
 .woocommerce table.shop_table td{
