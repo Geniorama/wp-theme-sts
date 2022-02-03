@@ -1,6 +1,4 @@
-*{
-    --p-color: #E3F401;
-}
+
 
 /* Reset elements */
 .page-template-sts-dashboard .header-elements{
@@ -275,7 +273,7 @@
     font-size: 20px;
 }
 
-.sts-section-info__buttons .sts-section-info__buttons__btn{
+.sts-section-info__buttons__btn{
     background-color: #E3F401 !important;
     color: black !important;
     padding: .5em 1em !important;
@@ -314,14 +312,13 @@
 }
 
 .sts-slick-plan .custom-prev{
-    left: 20px;
+    left: 0px;
 }
 
 .sts-slick-plan .custom-next{
-    right: 20px;
+    right: 0px;
 }
 
 .sts-slick-plan{
-    max-width: 900px;
     margin: 1em auto;
 }

@@ -2,7 +2,10 @@
 <ul class="sts-menu-dashboard">
     <?php 
         
-        $ids_products = do_shortcode( '[my_purchased_products]');
+        $data_products = do_shortcode( '[my_purchased_products]');
+        $data_products_decode = json_decode($data_products);
+
+        $ids_products = $data_products_decode->product_ids;
 
         $arr_ids= explode(",", $ids_products);
     ?>

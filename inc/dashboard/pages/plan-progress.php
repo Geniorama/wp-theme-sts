@@ -7,25 +7,18 @@
             <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/icono-atletismo.svg" alt="">
         </div>
     </div>
-
-
-    <?php
-        $ids_products = do_shortcode( '[my_purchased_products]');
-        $arr_ids= explode(",", $ids_products);
-        echo do_shortcode( '[sts_show_content ids_tax="'.$ids_products.'"]');
-    ?>
     
 </div>
 
 <!--Progress Bar
-                <h5 class="sts-progress-bar__title">
-                    Progreso total
-                </h5>
-                <div class="sts-progress-bar__load">
-                    <div class="sts-progress-bar__load__cont">
-                        <span class="sts-progress-bar__load__back"></span>
-                        <span class="sts-progress-bar__load__progress" data-progress="35"></span>
-                    </div>
-                    <span class="sts-progress-bar__load__number">35%</span>
-                </div>
-            -->
+    <h5 class="sts-progress-bar__title">
+        Progreso total
+    </h5>
+    <div class="sts-progress-bar__load">
+        <div class="sts-progress-bar__load__cont">
+            <span class="sts-progress-bar__load__back"></span>
+            <span class="sts-progress-bar__load__progress" data-progress="35"></span>
+        </div>
+        <span class="sts-progress-bar__load__number">35%</span>
+    </div>
+-->

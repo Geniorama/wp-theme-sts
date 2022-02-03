@@ -109,7 +109,10 @@ $curr_user_data = $curr_user->data;
             <?php endif; ?>
 
         </div>
+
+        <a href="#" class="sts-section-info__buttons__btn">
+            Editar Records
+        </a>
         <?php
-    
     ?>
 </div>
