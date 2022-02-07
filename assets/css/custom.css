@@ -1092,3 +1092,31 @@ html{
 .woocommerce table.shop_table td{
   background-color: white !important;
 }
+
+.woocommerce-checkout-payment{
+  background: black !important;
+  padding: 3rem;
+  color: white;
+}
+
+.woocommerce-checkout-payment .button{
+  background-color: var(--p-color) !important;
+  color: black !important;
+  font-family: inherit !important;
+  text-transform: uppercase !important;
+  border-radius: 0px !important;
+  height: 50px;
+  padding: 1rem 2rem !important;
+}
+
+.woocommerce-checkout-payment .woocommerce-terms-and-conditions-checkbox-text .woocommerce-terms-and-conditions-link{
+  color: #EAEAEA;
+}
+
+.woocommerce-checkout-payment .woocommerce-terms-and-conditions-checkbox-text .woocommerce-terms-and-conditions-link:hover{
+  color: var(--p-color);
+}
+
+.woocommerce-checkout .select2-selection{
+  height: 50px;
+}
