@@ -357,6 +357,10 @@ html{
 .sts-card-service__back__desc {
   font-weight: 500;
   line-height: 1.5em;
+  
+}
+
+.sts-card-service__back__desc p{
   opacity: 0.8;
 }
 
@@ -1119,4 +1123,25 @@ html{
 
 .woocommerce-checkout .select2-selection{
   height: 50px;
+}
+
+.sts-card-service__back__desc__btn{
+  display: block;
+  margin: 2rem auto;
+  background-color: #05BA02;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.sts-card-service__back__desc__btn:active, .sts-card-service__back__desc__btn:visited{
+  background-color: #05BA02;
+  color: white;
+}
+
+.sts-card-service__back__desc__btn:hover{
+  background-color: white;
+  color: #05BA02;
 }

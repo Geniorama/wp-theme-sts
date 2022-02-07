@@ -40,6 +40,9 @@ if(!function_exists('sts_flipcards_func')){
                                     <h4 class="sts-card-service__back__title"><?php the_title(); ?></h4>
                                     <p class="sts-card-service__back__desc">
                                         <?php the_field('descripcion'); ?>
+                                        <?php if(get_field('texto_del_boton')): ?>
+                                            <button class="sts-card-service__back__desc__btn"><?php the_field('texto_del_boton') ?></button>
+                                        <?php endif; ?>
                                     </p>
                                 </div>
                             </figure>
